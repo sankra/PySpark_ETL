@@ -14,3 +14,9 @@ This project implements a scalable **ETL (Extract, Transform, Load) pipeline** u
 - ✅ **Optimized Storage** using **Parquet/ORC** with partitioning and compression  
 - ✅ **Orchestration** using **Apache Airflow / AWS Step Functions**  
 - ✅ **Logging & Monitoring** with **CloudWatch / Spark UI**  
+
+
+### 📊 Performance Optimization
+- ✅ Use Parquet format for efficient storage & fast queries
+- ✅ Enable Spark optimizations (Catalyst & Tungsten)
+- ✅ Partition & bucket data to improve query performance
