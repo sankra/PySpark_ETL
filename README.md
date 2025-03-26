@@ -2,12 +2,12 @@
 A scalable and efficient ETL pipeline using PySpark, AWS, and Apache Airflow to process large-scale data. Includes data extraction, transformation, and loading into a data warehouse with performance optimizations.
 
 
-# 🚀 PySpark ETL Pipeline
+## 🚀 PySpark ETL Pipeline
 
-## 📌 Overview
+### 📌 Overview
 This project implements a scalable **ETL (Extract, Transform, Load) pipeline** using **Apache PySpark**. The pipeline processes large datasets, applies transformations, and loads data into a **data warehouse** or **cloud storage** for analytics.
 
-## ⚡ Features
+### ⚡ Features
 - ✅ **Batch Data Processing** with PySpark on **AWS EMR / Local Spark Cluster**  
 - ✅ **Data Extraction** from **CSV, JSON, Parquet, API, or Database (MySQL, PostgreSQL, etc.)**  
 - ✅ **Data Transformation** (cleaning, filtering, aggregations, schema validation)  
