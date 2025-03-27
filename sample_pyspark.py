@@ -36,3 +36,24 @@ df_transformed.show()
 
 # Stop Spark Session
 spark.stop()
+
+
+#Output
+
++-------+----------+------+
+|   Name|Department|Salary|
++-------+----------+------+
+|  Alice|       HR|  5000|
+|    Bob|       IT|  7000|
+|Charlie|       IT|  6000|
+|  David|  Finance|  6500|
+|    Eve|       HR|  4800|
++-------+----------+------+
+
++----------+----------+
+|Department|Avg_Salary|
++----------+----------+
+|      IT  |   6500.0 |
+|      HR  |   5000.0 |
+|  FINANCE |   6500.0 |
++----------+----------+
