@@ -16,8 +16,7 @@ columns = ["Name", "Department", "Salary"]
 
 df = spark.createDataFrame(data, columns)
 
-print("Original DataFrame:")
-df.show()
+
 
 # Step 3: Data Transformations
 df_transformed = (
@@ -28,6 +27,9 @@ df_transformed = (
       .avg("Salary")  # Calculate average salary per department
       .withColumnRenamed("avg(Salary)", "Avg_Salary")  # Rename column
 )
+
+print("Original DataFrame:")
+df.show()
 
 print("Transformed DataFrame:")
 df_transformed.show()
