@@ -6,7 +6,7 @@ from sqlalchemy import create_engine
 # Initialize Spark Session
 spark = SparkSession.builder \
     .appName("S3_to_RDS_ETL") \
-    .config("spark.jars", "/path/to/mysql-connector-java-8.0.33.jar") \  # Update JDBC driver path
+    .config("spark.jars", "/path/to/mysql-connector-java-8.0.33.jar") \  # Update JDBC driver path. Without this, Spark cannot connect to MySQL (AWS RDS) via JDBC.
     .getOrCreate()
 
 # S3 Configurations
