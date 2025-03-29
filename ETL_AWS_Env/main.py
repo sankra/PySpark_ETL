@@ -13,6 +13,7 @@ spark = SparkSession.builder \
 s3_bucket = "your-s3-bucket-name"
 s3_file_path = "s3a://" + s3_bucket + "/data/input_data.csv"
 
+
 # Read Data from S3 (CSV format)
 df = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s3_file_path)
 
@@ -28,12 +29,13 @@ df_transformed = df \
 print("Transformed DataFrame:")
 df_transformed.show()
 
-# 🔹 Load Data into AWS RDS (MySQL/PostgreSQL)
+# Load Data into AWS RDS (MySQL/PostgreSQL)
 rds_host = "your-rds-endpoint"
 rds_port = "3306"  # MySQL (Use 5432 for PostgreSQL)
 rds_dbname = "your_database"
 rds_user = "your_username"
 rds_password = "your_password"
+
 
 jdbc_url = f"jdbc:mysql://{rds_host}:{rds_port}/{rds_dbname}"
 properties = {
@@ -41,6 +43,7 @@ properties = {
     "password": rds_password,
     "driver": "com.mysql.cj.jdbc.Driver"
 }
+
 
 # Write DataFrame to RDS Table
 df_transformed.write \
