@@ -1,0 +1,5 @@
+PySpark ETL: Read from AWS S3 → Transform → Load into AWS RDS 🚀
+This PySpark script demonstrates how to:
+✅ Extract data from AWS S3 (CSV file).
+✅ Transform the data (filter, rename, and add a new column).
+✅ Load the transformed data into an AWS RDS (MySQL/PostgreSQL) database.
