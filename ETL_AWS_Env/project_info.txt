@@ -3,3 +3,16 @@ This PySpark script demonstrates how to:
 ✅ Extract data from AWS S3 (CSV file).
 ✅ Transform the data (filter, rename, and add a new column).
 ✅ Load the transformed data into an AWS RDS (MySQL/PostgreSQL) database.
+
+
+
+🔹 Explanation of Steps
+✅ Extract: Read CSV from AWS S3 using spark.read.format("csv").
+✅ Transform:
+
+Rename a column (withColumnRenamed).
+
+Add a new column (withColumn).
+
+Filter records (filter).
+✅ Load: Use JDBC connection to insert data into AWS RDS.
