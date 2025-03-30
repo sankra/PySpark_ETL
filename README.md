@@ -22,3 +22,16 @@ This project implements a scalable **ETL (Extract, Transform, Load) pipeline** u
 - ✅ Use Parquet format for efficient storage & fast queries
 - ✅ Enable Spark optimizations (Catalyst & Tungsten)
 - ✅ Partition & bucket data to improve query performance
+
+
+## 🧱 Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Data Processing | Apache PySpark |
+| Workflow Orchestration | Apache Airflow / AWS Step Functions |
+| Cloud Platform | AWS (S3, EMR, RDS, CloudWatch) |
+| Storage Formats | Parquet, ORC, CSV |
+| Scripting Language | Python |
+| Databases | MySQL / PostgreSQL / Redshift |
+| Configuration | YAML / JSON |
