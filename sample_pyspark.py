@@ -14,6 +14,7 @@ data = [
 ]
 columns = ["Name", "Department", "Salary"]
 
+#creating a dataframe
 df = spark.createDataFrame(data, columns)
 
 
