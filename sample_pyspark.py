@@ -29,9 +29,11 @@ df_transformed = (
       .withColumnRenamed("avg(Salary)", "Avg_Salary")  # Rename column
 )
 
+#printing original data frame
 print("Original DataFrame:")
 df.show()
 
+#printing the transformed Dataframe
 print("Transformed DataFrame:")
 df_transformed.show()
 
