@@ -41,7 +41,8 @@ df_transformed.show()
 spark.stop()
 
 
-#Output
+'''
+Output
 
 +-------+----------+------+
 |   Name|Department|Salary|
@@ -60,3 +61,4 @@ spark.stop()
 |      HR  |   5000.0 |
 |  FINANCE |   6500.0 |
 +----------+----------+
+'''
