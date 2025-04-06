@@ -1,3 +1,4 @@
+#importing required modules
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, current_date, lit
 import boto3
