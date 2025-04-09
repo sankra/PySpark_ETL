@@ -30,7 +30,7 @@ df_transformed = (
 )
 
 #printing original data frame
-print("Original DataFrame:")
+print("Original DataFrame Values:")
 df.show()
 
 #printing the transformed Dataframe
