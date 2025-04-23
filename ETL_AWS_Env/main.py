@@ -50,7 +50,9 @@ properties = {
 df_transformed.write \
     .jdbc(url=jdbc_url, table="your_table_name", mode="append", properties=properties)
 
+
 print("Data successfully loaded into AWS RDS!")
+print("ETL process completed successfully!")
 
 # Stop Spark Session
 spark.stop()
