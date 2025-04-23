@@ -8,7 +8,8 @@ This PySpark script demonstrates how to:
 
 🔹 Explanation of Steps
 ✅ Extract: Read CSV from AWS S3 using spark.read.format("csv").
-✅ Transform:
+✅ Transform: Performing basic data transformations using python or PySpark             
+
 
 Rename a column (withColumnRenamed).
 
