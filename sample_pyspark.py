@@ -11,11 +11,17 @@ data = [
     ("Charlie", "IT", 6000),
     ("David", "Finance", 6500),
     ("Eve", "HR", 4800)
+    ("Frank", "Finance", 7200),
+    ("Grace", "IT", 5500),
+    ("Heidi", "HR", 4900),
+    ("Ivan", "Finance", 8000),
+    ("Judy", "IT", 6200)
 ]
 columns = ["Name", "Department", "Salary"]
 
 #creating a dataframe
 df = spark.createDataFrame(data, columns)
+
 
 
 
@@ -27,6 +33,8 @@ df_transformed = (
       .groupBy("Department")  # Group by Department
       .avg("Salary")  # Calculate average salary per department
       .withColumnRenamed("avg(Salary)", "Avg_Salary")  # Rename column
+        .orderBy("Department")  # Order by Department
+
 )
 
 #printing original data frame
@@ -36,6 +44,7 @@ df.show()
 #printing the transformed Dataframe
 print("Transformed DataFrame:")
 df_transformed.show()
+
 
 # Stop Spark Session
 spark.stop()

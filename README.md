@@ -30,8 +30,8 @@ This project implements a scalable **ETL (Extract, Transform, Load) pipeline** u
 |-------|------------|
 | Data Processing | Apache PySpark |
 | Workflow Orchestration | Apache Airflow / AWS Step Functions |
-| Cloud Platform | AWS (S3, EMR, RDS, CloudWatch) |
-| Storage Formats | Parquet, ORC, CSV |
+| Cloud Platform | AWS (S3, EMR, RDS, CloudWatch, Lambda) |
+| Storage Formats | Parquet, ORC, CSV, JSON |
 | Scripting Language | Python |
 | Databases | MySQL / PostgreSQL / Redshift |
 | Configuration | YAML / JSON |

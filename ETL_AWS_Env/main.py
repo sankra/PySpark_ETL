@@ -42,7 +42,10 @@ jdbc_url = f"jdbc:mysql://{rds_host}:{rds_port}/{rds_dbname}"
 properties = {
     "user": rds_user,
     "password": rds_password,
+    "driver": "com.mysql.cj.jdbc.Driver"  # Use "org.postgresql.Driver" for PostgreSQL
     "driver": "com.mysql.cj.jdbc.Driver"
+    # Use "org.postgresql.Driver" for PostgreSQL
+
 }
 
 
