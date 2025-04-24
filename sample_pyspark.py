@@ -33,6 +33,7 @@ df_transformed = (
       .groupBy("Department")  # Group by Department
       .avg("Salary")  # Calculate average salary per department
       .withColumnRenamed("avg(Salary)", "Avg_Salary")  # Rename column
+        .orderBy("Department")  # Order by Department
 
 )
 
