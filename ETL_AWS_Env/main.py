@@ -27,8 +27,8 @@ df_transformed = df \
     .withColumn("processed_date", current_date()) \  # Add new column with current date
     .filter(col("value") > 1000)  # Filter records where 'value' > 1000
 
-print("Transformed DataFrame:")
-df_transformed.show()
+    print("Transformed DataFrame:")
+    df_transformed.show()
 
 # Load Data into AWS RDS (MySQL/PostgreSQL)
 rds_host = "your-rds-endpoint"
@@ -36,6 +36,7 @@ rds_port = "3306"  # MySQL (Use 5432 for PostgreSQL)
 rds_dbname = "your_database"
 rds_user = "your_username"
 rds_password = "your_password"
+
 
 
 jdbc_url = f"jdbc:mysql://{rds_host}:{rds_port}/{rds_dbname}"
@@ -54,8 +55,10 @@ df_transformed.write \
     .jdbc(url=jdbc_url, table="your_table_name", mode="append", properties=properties)
 
 
+
 print("Data successfully loaded into AWS RDS!")
 print("ETL process completed successfully!")
+
 
 # Stop Spark Session
 spark.stop()
