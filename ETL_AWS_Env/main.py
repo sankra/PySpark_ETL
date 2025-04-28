@@ -31,34 +31,34 @@ df_transformed = df \
     df_transformed.show()
 
 # Load Data into AWS RDS (MySQL/PostgreSQL)
-rds_host = "your-rds-endpoint"
-rds_port = "3306"  # MySQL (Use 5432 for PostgreSQL)
-rds_dbname = "your_database"
-rds_user = "your_username"
-rds_password = "your_password"
+    rds_host = "your-rds-endpoint"
+    rds_port = "3306"  # MySQL (Use 5432 for PostgreSQL)
+    rds_dbname = "your_database"
+    rds_user = "your_username"
+    rds_password = "your_password"
 
 
 
-jdbc_url = f"jdbc:mysql://{rds_host}:{rds_port}/{rds_dbname}"
-properties = {
-    "user": rds_user,
-    "password": rds_password,
-    "driver": "com.mysql.cj.jdbc.Driver"  # Use "org.postgresql.Driver" for PostgreSQL
-    "driver": "com.mysql.cj.jdbc.Driver"
-    # Use "org.postgresql.Driver" for PostgreSQL
+    jdbc_url = f"jdbc:mysql://{rds_host}:{rds_port}/{rds_dbname}"
+    properties = {
+        "user": rds_user,
+        "password": rds_password,
+        "driver": "com.mysql.cj.jdbc.Driver"  # Use "org.postgresql.Driver" for PostgreSQL
+        "driver": "com.mysql.cj.jdbc.Driver"
+        # Use "org.postgresql.Driver" for PostgreSQL
 
-}
-
-
-# Write DataFrame to RDS Table
-df_transformed.write \
-    .jdbc(url=jdbc_url, table="your_table_name", mode="append", properties=properties)
+    }
 
 
+    # Write DataFrame to RDS Table
+    df_transformed.write \
+        .jdbc(url=jdbc_url, table="your_table_name", mode="append", properties=properties)
 
-print("Data successfully loaded into AWS RDS!")
-print("ETL process completed successfully!")
 
 
-# Stop Spark Session
-spark.stop()
+    print("Data successfully loaded into AWS RDS!")
+    print("ETL process completed successfully!")
+
+
+    # Stop Spark Session
+    spark.stop()
