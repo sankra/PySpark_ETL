@@ -29,6 +29,7 @@ df_transformed = df \
 
     print("Transformed DataFrame:")
     df_transformed.show()
+    df_transformed.printSchema()
 
 # Load Data into AWS RDS (MySQL/PostgreSQL)
     rds_host = "your-rds-endpoint"
@@ -58,6 +59,7 @@ df_transformed = df \
 
     print("Data successfully loaded into AWS RDS!")
     print("ETL process completed successfully!")
+    print("Transformed DataFrame:")
 
 
     # Stop Spark Session
