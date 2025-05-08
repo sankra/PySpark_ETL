@@ -11,21 +11,20 @@ spark = SparkSession.builder \
     .getOrCreate()
 
 # S3 Configurations
-s3_bucket = "your-s3-bucket-name"
-s3_file_path = "s3a://" + s3_bucket + "/data/input_data.csv"
+    s3_bucket = "your-s3-bucket-name"
+    s3_file_path = "s3a://" + s3_bucket + "/data/input_data.csv"
 
 
 # Read Data from S3 (CSV format)
-df = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s3_file_path)
+    df = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(s3_file_path)
 
-print("Original DataFrame:")
-df.show()
+
+    print("Original DataFrame:")
+    df.show()
 
 # 🔹 Data Transformation
-df_transformed = df \
-    .withColumnRenamed("old_column_name", "new_column_name") \  # Rename column
-    .withColumn("processed_date", current_date()) \  # Add new column with current date
-    .filter(col("value") > 1000)  # Filter records where 'value' > 1000
+    df_transformed = df \
+        .withColumnRenamed("old_column_name", "new_column_name").withColumn("processed_date", current_date()).filter(col("value") > 1000)  # Filter records where 'value' > 1000
 
     print("Transformed DataFrame:")
     df_transformed.show()
@@ -60,6 +59,7 @@ df_transformed = df \
     print("Data successfully loaded into AWS RDS!")
     print("ETL process completed successfully!")
     print("Transformed DataFrame:")
+
 
 
     # Stop Spark Session
