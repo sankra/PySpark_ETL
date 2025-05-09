@@ -22,6 +22,7 @@ spark = SparkSession.builder \
     print("Original DataFrame:")
     df.show()
 
+
 # 🔹 Data Transformation
     df_transformed = df \
         .withColumnRenamed("old_column_name", "new_column_name").withColumn("processed_date", current_date()).filter(col("value") > 1000)  # Filter records where 'value' > 1000
@@ -59,6 +60,10 @@ spark = SparkSession.builder \
     print("Data successfully loaded into AWS RDS!")
     print("ETL process completed successfully!")
     print("Transformed DataFrame:")
+    print("Data successfully loaded into AWS RDS!")
+    print("ETL process completed successfully!")
+    print("Transformed DataFrame:")
+
 
 
 
